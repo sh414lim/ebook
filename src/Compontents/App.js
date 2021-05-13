@@ -1,4 +1,5 @@
 import React from "react";
+import Globalstyle from "./Globalstyle";
 import Router from "./Router";
 
 class App extends React.Component{
@@ -6,6 +7,7 @@ class App extends React.Component{
     return(
       <>
       <Router/>
+      <Globalstyle/>
       </>
     )
   }
