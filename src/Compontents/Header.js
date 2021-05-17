@@ -4,7 +4,11 @@ import styled from "styled-components";
 
 
 const Head=styled.header`
-
+    display:flex;
+   height:50px;
+   width:100%;
+   box-shadow:5px 5px 5px rgba(0,0,0,0.5);
+   background-color:rgba(0,0,0,0.7);
 
 `;
 
@@ -43,7 +47,7 @@ export default withRouter(({location:{pathname}})=>(
     <SLink to="/">Song</SLink>
     </Item>
 
-    <Item current={pathname === "/album"}>
+    <Item current={pathname === "/albums"}>
     <SLink to="/albums" >Album</SLink>
     </Item>
 
