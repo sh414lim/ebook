@@ -24,13 +24,16 @@ const Item=styled.div`
          grid-template-columns:repeat(2,2fr);
     `;
 
+    const View=styled.span``;
 
 
-function SongForm({image,title,children}){
+
+function SongForm({view,title,children}){
     return(
         <Container>
             <Title>{title}</Title>
             <Item>{children}</Item>
+            <View>{view}</View>
         </Container>
 
     )

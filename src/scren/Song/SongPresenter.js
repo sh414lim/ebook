@@ -6,17 +6,18 @@ const Container =styled.div`
 padding: 10px;
 `;
 
+
 const SongPresenter =({TopTrack,loading})=>loading ? null :(
     <Container>
         {TopTrack && TopTrack.length > 0 &&(
             <Form title="Top Song">
-                
                 {TopTrack.map(song=>
                 <span>
                     {song.name}
                 </span>
                 )}
             </Form>
+            
 )}
     </Container>
 )
