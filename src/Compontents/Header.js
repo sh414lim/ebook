@@ -8,7 +8,7 @@ const Head=styled.header`
    height:50px;
    width:100%;
    box-shadow:5px 5px 5px rgba(0,0,0,0.5);
-   background-color:rgba(0,0,0,0.7);
+   background-color:black;
 
 `;
 
@@ -24,7 +24,7 @@ height:50px;
 const Item=styled.li`
     font-size:15px;
     font-weight:600;
-    color:${props=>(props.current ? "black" :"gray")};
+    color:${props=>(props.current ? "white" :"gray")};
     transition: color 0.7s ease-in-out;
     &:hover{
         color:black;
