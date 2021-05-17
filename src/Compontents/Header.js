@@ -4,34 +4,28 @@ import styled from "styled-components";
 
 
 const Head=styled.header`
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    position: fixed;
-    height:100vh;
-    width:13%;
-    box-shadow:5px 3px 2px 1px rgba(20, 20, 20, 0.5);
-    background-color:#ecf0f1;
-    
+
+
 `;
 
 const List =styled.ul`
-    display:flex;
-    flex-direction:column;
 
-    
+ display:flex;
+ justify-content:space-around;
+ align-items:center;
+ width:100%;
+height:50px;
 `;
 
 const Item=styled.li`
-    padding-top:50px;
-    font-size:20px;
+    font-size:15px;
     font-weight:600;
-    color:${props=>(props.current ? "green" :"black")};
+    color:${props=>(props.current ? "black" :"gray")};
     transition: color 0.7s ease-in-out;
     &:hover{
-        color:green;
+        color:black;
     }
+
 `;
  
 
@@ -46,19 +40,24 @@ export default withRouter(({location:{pathname}})=>(
     <List>
 
     <Item current={pathname === "/"}>
-    <SLink to="/">Home</SLink>
+    <SLink to="/">Song</SLink>
     </Item>
 
-    <Item current={pathname === "/book"}>
-    <SLink to="/book" >Book</SLink>
+    <Item current={pathname === "/album"}>
+    <SLink to="/albums" >Album</SLink>
     </Item>
 
-    <Item current={pathname === "/comic"}>
-    <SLink to="/comic" >Comic</SLink>
+    <Item current={pathname === "/artist"}>
+    <SLink to="/artist" >Artist</SLink>
     </Item>
 
     <Item current={pathname === "/search"}>
         <SLink to="/search" >Search</SLink>
+    </Item>
+
+    
+    <Item current={pathname === "/login"}>
+        <SLink to="/login" >Login</SLink>
     </Item>
 
     </List>
