@@ -1,5 +1,5 @@
 import React from "react";
-import { SongApi } from "../../api";
+import { ChartApi } from "../../api";
 import SongPresenter from "./SongPresenter";
 
 
@@ -16,8 +16,7 @@ export default class extends React.Component{
 
     getSong=async()=>{
         try{
-            const {data:{tracks:{track:TopTrack}}}= await SongApi.TopTrack("chart.gettoptracks");
-            console.log(TopTrack);
+            const {data:{tracks:{track:TopTrack}}}= await ChartApi.allApi("chart.gettoptracks");
             this.setState({
                 TopTrack,
             })

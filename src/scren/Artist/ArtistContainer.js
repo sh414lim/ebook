@@ -1,4 +1,5 @@
 import React from "react";
+import { ChartApi } from "../../api";
 import ArtistPresenter from "./ArtistPresenter";
 
 export default class extends React.Component{
@@ -8,6 +9,31 @@ export default class extends React.Component{
         error:null,
         loading:true,
     }
+    getArtist=async()=>{
+        try{
+        const {data:
+        {artists:{artist:TopArtist }}}
+        =await ChartApi.allApi("chart.gettopartists")
+            this.setState({
+                TopArtist,
+            })
+        }catch{
+            this.setState({
+                error:"Can;t Find...."
+            })
+        }finally{
+            this.setState({
+                loading:false
+            })
+        }
+    }
+
+    componentDidMount(){
+        this.getArtist();
+    }
+    
+
+
     render(){
         const {TopArtist,Track,error,loading}=this.state;
         return(

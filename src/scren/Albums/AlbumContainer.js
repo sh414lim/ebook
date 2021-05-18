@@ -1,5 +1,5 @@
 import React from "react";
-import { AlbumApi } from "../../api";
+import {  ChartApi } from "../../api";
 import AlbumPresenter from "./AlbumPresenter";
 
 export default class extends React.Component{
@@ -11,10 +11,9 @@ export default class extends React.Component{
 
     async componentDidMount(){
         try{
-            const {data:{toptags:{tag:toptags}}} =await AlbumApi.toptags();
-            this.setState({
-                toptags,
-            })
+           const toptags=await ChartApi.allApi("album.getinfo",)
+           console.log(toptags);
+           
 
         }catch{
                 this.setState({
@@ -28,10 +27,10 @@ export default class extends React.Component{
     }
 
     render(){
-        const {TopAlbum,error,loading}=this.state;
+        const {toptags,error,loading}=this.state;
         return(
                 <AlbumPresenter
-                TopAlbum={TopAlbum}
+                toptags={toptags}
                 error={error}
                 loading={loading}
                 />
