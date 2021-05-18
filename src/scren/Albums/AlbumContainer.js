@@ -11,7 +11,7 @@ export default class extends React.Component{
 
     async componentDidMount(){
         try{
-           const toptags=await ChartApi.allApi("album.getinfo",)
+           const toptags=await ChartApi.allApi("album.gettoptags","radiohead","the%20bends")
            console.log(toptags);
            
 

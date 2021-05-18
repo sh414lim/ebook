@@ -10,9 +10,11 @@ const api =axios.create({
 
 
 export const ChartApi={
-   allApi:(method = " ")=>api.get("/2.0/",{
+   allApi:(method = " ",artist=" ",album=" ")=>api.get("/2.0/",{
         params:{
             method:method,
+            artist:artist,
+            album:album,
         }
     }),
     search:(term)=>api.get("?method=artist.search&artist=cher",{
@@ -21,7 +23,6 @@ export const ChartApi={
         }
     })
 }
-
 
 
 
