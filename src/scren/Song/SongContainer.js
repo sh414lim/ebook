@@ -16,7 +16,7 @@ export default class extends React.Component{
 
     getSong=async()=>{
         try{
-            const {data:{tracks:TopTrack}}= await SongApi.TopTrack("chart.gettoptracks");
+            const {data:{tracks:{track:TopTrack}}}= await SongApi.TopTrack("chart.gettoptracks");
             console.log(TopTrack);
             this.setState({
                 TopTrack,
