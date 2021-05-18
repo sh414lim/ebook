@@ -27,7 +27,7 @@ const Item=styled.li`
     color:${props=>(props.current ? "white" :"gray")};
     transition: color 0.7s ease-in-out;
     &:hover{
-        color:black;
+        color:white;
     }
 
 `;

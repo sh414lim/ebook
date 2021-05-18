@@ -36,6 +36,7 @@ export default class extends React.Component{
 
     render(){
         const {TopArtist,Track,error,loading}=this.state;
+        console.log(this.state);
         return(
             <ArtistPresenter
             TopArtist={TopArtist}

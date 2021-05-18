@@ -9,7 +9,7 @@ const Container =styled.div``;
 const Album =({toptags,loading})=>loading ? null : (
         <Container>
             {toptags && toptags.length > 0 && (
-                <Form title="Album">
+                <Form title="Album Rank">
                     {toptags.map(album=>
                         <span>
                             {album.name}

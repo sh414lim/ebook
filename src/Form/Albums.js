@@ -6,24 +6,41 @@ const Container=styled.div`
 `;
 
 const Title=styled.span`
- 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+  font-weight:600;
+  margin-top:20px;
 `;
 
-const Item=styled.div`
-    
+const Item=styled.ul`
+    display:block;
+    margin-left:50px;
     `;
 
+const List=styled.li`
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-gap:30px;
+    margin-top:50px;
+    font-weight:600;
+`;
 
 
 
-function SongForm({title,children}){
+
+function AlbumForm({title,children}){
     return(
         <Container>
             <Title>{title}</Title>
-            <Item>{children}</Item>
+            <Item>
+              <List>{children}</List>
+                </Item>
         </Container>
 
     )
 }
 
-export default SongForm;
+export default AlbumForm;
