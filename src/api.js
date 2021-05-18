@@ -8,7 +8,7 @@ const api =axios.create({
     }
 })
 export const AlbumApi={
-    TopAlbum:()=>api.get("?method=album.gettoptags&artist=radiohead&album=the%20bends"),
+    toptags:()=>api.get("?method=album.gettoptags&artist=radiohead&album=the%20bends"),
     search:(term)=>api.get("?method=album.search&album=believe",{
         params:{
             query:encodeURIComponent(term)

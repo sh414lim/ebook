@@ -12,11 +12,11 @@ export default class extends React.Component{
 
     async componentDidMount(){
         try{
-            const {data:{tracks:{track:TopTrack}}}= await SongApi.TopTrack();
-            console.log(TopTrack);
+            const {data:{tracks:TopTrack}}= await SongApi.TopTrack();
             this.setState({
                 TopTrack,
             })
+            console.log(TopTrack);
         }catch{
             this.setState({
                 error:"Can't Find Song...."
