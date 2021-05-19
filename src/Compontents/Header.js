@@ -22,19 +22,6 @@ height:50px;
 `;
 
 
-
-const SignLink=styled(Link)`
-  color:${props=>(props.current ? "white" :"gray")};
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  &:hover{background-color:inherit};
-`;
-
-
-
-
-
 const Item=styled.li`
     font-size:15px;
     font-weight:600;
@@ -45,17 +32,34 @@ const Item=styled.li`
     }
    
 `;
-const Login=styled.li`
-  font-size:13px;
-    font-weight:600;
-    color:${props=>(props.current ? "white" :"gray")};
+
+
+const SideHead=styled.div`
+    position:fixed;
+    background-color:black;
+   width:6vw;
+   height:15vh;
+   border-radius:20px;
+   margin-top:10px;
+   margin-left:5px;
+   box-shadow:3px 2px rgba(20,20,20,0.3), 1em 0 .4em rgba(20,20,20,0.2);
+`
+const SideList=styled.ul`
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:5px;
+`;
+const SLogin=styled.li`
+ margin-top:10px;
+font-weight:600;
+padding:10px;
+color:${props=>(props.current ? "white" :"gray")};
+&:hover{
+    color:blue;
     transition: color 0.7s ease-in-out;
-    padding:10px;
-    &:hover{
-        color:white;
-    }
-
-
+}
 `;
 
  
@@ -91,15 +95,21 @@ export default withRouter(({location:{pathname}})=>(
         <SLink to="/poster" >Poster</SLink>
     </Item>
 
-            
-    <Login  current={pathname === "/login"}>
-        <SignLink to="/login" >Login</SignLink>
-    </Login>
-
-    <Login  current={pathname === "/register"}>
-        <SLink to="/register" >Sign Up</SLink>
-    </Login>
     </List>
     </Head>
+    <SideHead>
+        <SideList>
+
+    <SLogin current={pathname === "/login"} >
+        <SLink to="/login" >Login</SLink>
+    </SLogin>
+
+    <SLogin current={pathname === "/register"} >
+        <SLink to="/register" >Sign Up</SLink>
+    </SLogin>
+    </SideList>
+    </SideHead>
+
+
     </>
 ));
