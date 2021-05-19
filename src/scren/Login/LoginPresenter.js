@@ -1,1 +1,2 @@
-export default ()=>"arist";
+export default ()=>"로그인";
+

@@ -21,6 +21,20 @@ const List =styled.ul`
 height:50px;
 `;
 
+
+
+const SignLink=styled(Link)`
+  color:${props=>(props.current ? "white" :"gray")};
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  &:hover{background-color:inherit};
+`;
+
+
+
+
+
 const Item=styled.li`
     font-size:15px;
     font-weight:600;
@@ -29,13 +43,27 @@ const Item=styled.li`
     &:hover{
         color:white;
     }
+   
+`;
+const Login=styled.li`
+  font-size:13px;
+    font-weight:600;
+    color:${props=>(props.current ? "white" :"gray")};
+    transition: color 0.7s ease-in-out;
+    padding:10px;
+    &:hover{
+        color:white;
+    }
+
 
 `;
+
  
 
 const SLink=styled(Link)`
-
+          
 `
+
 
 
 export default withRouter(({location:{pathname}})=>(
@@ -59,11 +87,18 @@ export default withRouter(({location:{pathname}})=>(
         <SLink to="/search" >Search</SLink>
     </Item>
 
-    
-    <Item current={pathname === "/login"}>
-        <SLink to="/login" >Login</SLink>
+    <Item current={pathname === "/poster"}>
+        <SLink to="/poster" >Poster</SLink>
     </Item>
 
+            
+    <Login  current={pathname === "/login"}>
+        <SignLink to="/login" >Login</SignLink>
+    </Login>
+
+    <Login  current={pathname === "/register"}>
+        <SLink to="/register" >Sign Up</SLink>
+    </Login>
     </List>
     </Head>
     </>
