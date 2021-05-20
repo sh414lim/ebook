@@ -35,24 +35,30 @@ const Item=styled.li`
 
 
 const SideHead=styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
     position:fixed;
     background-color:black;
    width:6vw;
-   height:15vh;
+   height:13vh;
    border-radius:20px;
-   margin-top:10px;
+   margin-top:8px;
    margin-left:5px;
    box-shadow:3px 2px rgba(20,20,20,0.3), 1em 0 .4em rgba(20,20,20,0.2);
 `
 const SideList=styled.ul`
     display:flex;
+    justify-content:center;
+    align-items:center;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-top:5px;
 `;
 const SLogin=styled.li`
- margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 font-weight:600;
 padding:10px;
 color:${props=>(props.current ? "blue" :"gray")};
