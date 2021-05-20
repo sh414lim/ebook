@@ -13,9 +13,9 @@ const Loginbox =styled.div`
     border-radius:30px;
     background-color:white;
     width:750px;
-    height:450px;
+    height:600px;
     margin-left:31%;
-    margin-top:200px;
+    margin-top:150px;
     box-shadow:6px 6px rgba(20,20,20,0.3), 1em 0 .4em rgba(20,20,20,0.2);
 `;
 

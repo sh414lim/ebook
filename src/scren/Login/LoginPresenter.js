@@ -30,6 +30,35 @@ font-size:30px;
 font-weight:600;
 `;
 
+const Button =styled.button`
+    font-size:18px;
+    width:90px;
+    height:40px;
+    margin-top:20px;
+    border-radius:5px;
+    border:none;
+    color:white;
+    background-color:black;
+    &:hover{
+        color:gray;
+    }
+`;
+
+const SLink=styled(Link)`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:200px;
+    font-size:20px;
+    font-weight:500;
+    &:hover{
+        color:gray;
+    }
+
+`;
+
+
+
 
 const RegisterPresenter =()=>{
     return(
@@ -39,7 +68,9 @@ const RegisterPresenter =()=>{
             <H1>Login</H1>
                 <Input type="text" placeholder="User Name" />
                 <Input type="password" placeholder="User password" />
+            <Button>Login</Button>
             </Form>
+            <SLink to="register">Sign Up</SLink>
             </AuthForm>
         
         </Container>

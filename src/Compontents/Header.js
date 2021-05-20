@@ -61,9 +61,9 @@ const SLogin=styled.li`
     align-items:center;
 font-weight:600;
 padding:10px;
-color:${props=>(props.current ? "blue" :"gray")};
+color:${props=>(props.current ? "white" :"gray")};
 &:hover{
-    color:blue;
+    color:white;
     transition: color 0.7s ease-in-out;
 }
 `;
