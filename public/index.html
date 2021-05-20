@@ -18,8 +18,21 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script src="/__/firebase/8.6.1/firebase-app.js"></script>
-    <script src="/__/firebase/8.6.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyA3b-edWsGX4TS2AeER08CW6DymAzsh430",
+        authDomain: "musicweb-c6c70.firebaseapp.com",
+        projectId: "musicweb-c6c70",
+        storageBucket: "musicweb-c6c70.appspot.com",
+        messagingSenderId: "668873790188",
+        appId: "1:668873790188:web:693bb6b1e37ce8e3e14bc9",
+        measurementId: "G-84KE0ZKRL4",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
