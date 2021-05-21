@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import AuthForm from "../../Form/AuthForm"
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 // import {signlnWithGoogle} from "../../firebase_config";
-import {signUp} from "../../modules/auth";
 
 const Container =styled.div`
 `;
