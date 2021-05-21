@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import AuthForm from "../../Form/AuthForm"
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-import Google from "../../Form/google";
+// import {signlnWithGoogle} from "../../firebase_config";
+import {signUp} from "../../modules/auth";
 
 const Container =styled.div`
 `;
@@ -61,20 +62,21 @@ const SLink=styled(Link)`
 
 
 
+
+
+
 const RegisterPresenter =()=>{
     return(
         <Container>
             <AuthForm>
-            <Form>
+            <Form >
             <H1>Login</H1>
                 <Input type="text" placeholder="User Name" />
                 <Input type="password" placeholder="User password" />
             <Button>Login</Button>
             </Form>
             <SLink to="register">Sign Up</SLink>
-            <Google/>
             </AuthForm>
-        
         </Container>
         )
 }

@@ -14,9 +14,17 @@ function GoogleSignin(props){
         }
     })
     return(
+        <>
         <div>
             <button onClick ={signlnWithGoogle}>로그인</button>
         </div>
+        <div>
+            <button onClick={()=>{
+                auth.signOut();
+                console.log("로그아웃 합니다");
+            }}>Exit</button>
+        </div>
+        </>
     )
 }
 

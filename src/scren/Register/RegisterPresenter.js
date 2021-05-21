@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import RegisterForm from "../../Form/Register"
 import styled from "styled-components";
+import {signUp} from "../../firebase_config"
 const Container =styled.div`
 `;
 
@@ -46,23 +47,48 @@ const Button =styled.button`
         color:gray;
     }
 `;
+function SignUp(){
+    const [email,setEmail]=useState("")
+    const [password,setPassword]=useState("")
 
+    const handleOnChange =(e)=>{
+        const type=e.target.name;
+        if(type === "email"){
+            setEmail(e.target.value);
 
+        }else if (type ==="password"){
+            setPassword(e.target.value);
+        }
+    };
 
-const RegisterPresenter =()=>{
+    const hadleOnSubmit=async (e) =>{
+        e.preventDefault();
+        if(email !== "" && password !== ""){
+            try{
+                await signUp(email,password);
+            }catch(error){
+                console.log(error);
+            }
+        }
+    }
+
+    
+    
     return(
         <Container>
         <RegisterForm>
-            <Form>
+            <Form onSubmit={hadleOnSubmit}>
             <H1>Sign Up</H1>
-                <Input type="text" placeholder="ID" />
-                <Input type="password" placeholder="PassWord" />
+                <Input type="text" placeholder="ID" name="email" value={email} onChange={handleOnChange} />
+                <Input type="password" placeholder="PassWord" name="password" value={password} onChange={handleOnChange} />
                 <Input type="password" placeholder="PassWord Check" />
                 <Button>Sign up</Button>
             </Form>
         </RegisterForm>
         </Container>
     )
-}
+    
+    
+};
 
-export default RegisterPresenter;
+export default SignUp;

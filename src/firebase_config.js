@@ -1,4 +1,6 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import "firebase/firestore";
+import "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA3b-edWsGX4TS2AeER08CW6DymAzsh430",
@@ -10,10 +12,10 @@ const firebaseConfig = {
     measurementId: "G-84KE0ZKRL4",
   };
 
-  firebase.intializeApp(firebaseConfig)
+  firebase.initializeApp(firebaseConfig)
 
-  export const auth=firebase.auth();
-  export const firestore=firebase.firestore();
+  export const auth=firebase.auth;
+  export const database=firebase.database();
 
   const provider = new firebase.auth.googleAuthProvider();
   //googleAuthProvider 클래스를 authentication 라이브러리 에서 사용할 수 있도록 불러오는 코드
@@ -25,6 +27,6 @@ const firebaseConfig = {
   //signlnWPopup 메소드는 여러 파라미터를  받을 수 있다. 트위터 페이스북 깃허브 등으로 로그인이 필요 할 수 도 있음
   //google 로  로그인 할것이므로 파라미터 위에서 정의한 provider을 넣어준다.
 
-  export default firebase
+  export default {firebase};
 
 
