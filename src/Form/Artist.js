@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import {Link} from "react-router-dom"
+ 
 const Container=styled.div`
 border-radius:30px;
 box-shadow:6px 6px rgba(20,20,20,0.3), -1em 0 .4em rgba(20,20,20,0.5);
@@ -33,7 +34,9 @@ const List=styled.li`
     grid-gap:30px;
     margin-top:50px;
     font-weight:600;
+  
 `;
+
 
 
 

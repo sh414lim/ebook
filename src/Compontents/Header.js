@@ -13,7 +13,6 @@ const Head=styled.header`
 `;
 
 const List =styled.ul`
-
  display:flex;
  justify-content:space-around;
  align-items:center;
