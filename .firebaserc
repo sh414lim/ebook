@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "my-project-test-314302"
+    "default": "my-project-test-314302",
+    "music": "musicweb-c6c70"
   }
 }

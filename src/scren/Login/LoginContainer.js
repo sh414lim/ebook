@@ -1,14 +1,19 @@
-import React from "react" ;
-import LoginPresenter from  "./LoginPresenter";
+import "firebase/firestore";
+import "firebase/auth";
+import {auth} from "../../fbase";
+import {signlnWithGoogle} from "../../fbase";
 
-export default class extends React.Component{
-    state={
-        error:null,
-        loading:false
-    }
-    render(){
-        return(
-            <LoginPresenter/>
-        )
-    }
+function HoohleSignin(props){
+    auth.onAuthStateChanged(user=>{
+        if(user !== null){
+            console.log("로그인")
+        }
+    })
+    return(
+        <div>
+            <button onClick ={signlnWithGoogle}>로그인</button>
+        </div>
+    )
 }
+
+export default HoohleSignin;

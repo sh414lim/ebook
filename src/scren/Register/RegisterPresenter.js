@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import RegisterForm from "../../Form/Register"
 import styled from "styled-components";
-import {signUp} from "../../firebase_config"
 const Container =styled.div`
 `;
 

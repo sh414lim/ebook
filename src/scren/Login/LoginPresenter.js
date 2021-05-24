@@ -2,9 +2,12 @@ import React from "react";
 import AuthForm from "../../Form/AuthForm"
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import HoohleSignin from "./LoginContainer";
+
 // import {signlnWithGoogle} from "../../firebase_config";
 
 const Container =styled.div`
+    display: flex;
 `;
 
 const Form =styled.form`
@@ -75,6 +78,7 @@ const RegisterPresenter =()=>{
             <Button>Login</Button>
             </Form>
             <SLink to="register">Sign Up</SLink>
+            <HoohleSignin/>
             </AuthForm>
         </Container>
         )
