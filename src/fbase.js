@@ -14,11 +14,7 @@ const firebaseConfig={
 
 firebase.initalizeApp(firebaseConfig);
 
-const provider =new firebase.auth.GoogleAuthProvider();
 
-export const auth=firebase.auth();
-export const firestore=firebase.firestore();
-export const signlnWithGoogle =() =>auth.signlnWithPopup(provider)
 
 export const firebaselnstance=firebase //소셜 로그인
 export const authService =firebase.auth(); //로그인 모듈
