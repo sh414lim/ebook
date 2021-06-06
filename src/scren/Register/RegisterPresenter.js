@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import RegisterForm from "../../Form/Register"
 import styled from "styled-components";
 const Container =styled.div`
@@ -58,6 +59,18 @@ const RegisterPresenter =()=>{
             </Form>
         </RegisterForm>
         </Container>
+=======
+import React from "react";
+import AuthTemplate from "../../modules/AuthTemplate";
+import Form from "../../Form/AuthForm"
+
+
+const RegisterPresenter =()=>{
+    return(
+        <Form>
+            <AuthTemplate/>
+        </Form>
+>>>>>>> parent of dd95624 (Register Form)
     )
     
     

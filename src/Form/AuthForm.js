@@ -15,8 +15,7 @@ const Loginbox =styled.div`
     width:750px;
     height:450px;
     margin-left:31%;
-    margin-top:200px;
-    box-shadow:6px 6px rgba(20,20,20,0.3), 1em 0 .4em rgba(20,20,20,0.2);
+    margin-top:250px;
 `;
 
 const Title= styled.span``;
